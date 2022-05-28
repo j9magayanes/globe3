@@ -17,7 +17,7 @@ export default function GlobeComponent() {
 
     const [data, setData] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
-    const colorScale = chroma.scale(['red', 'yellow']);
+    const colorScale = chroma.scale(['green', 'orange']);
 
 
     React.useEffect(() => {
@@ -26,7 +26,7 @@ export default function GlobeComponent() {
             try {
 
                 fetch(
-                    "https://sleeping-dragon.000webhostapp.com/correctedData.json"
+                    "https://raw.githubusercontent.com/j9magayanes/data/main/happiness.json"
                 )
                     .then((response) => response.json())
                     .then((data) => {
@@ -107,33 +107,11 @@ export default function GlobeComponent() {
                         ${d.ADMIN}
                     </div>
                         <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            Visitors: ${number(d.POP_EST).format("0a")}
+                            Threat Level Value: ${lookup[d.ADMIN]?.happinessScore}
                         </div>
                         <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            Happiness Score: ${lookup[d.ADMIN]?.happinessScore}
+                            Threat Level: ${lookup[d.ADMIN]?.happinessRank}
                         </div>
-                        <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            Happiness Rank: ${lookup[d.ADMIN]?.happinessRank}
-                        </div>
-                        <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            Life Expectancy: ${lookup[d.ADMIN]?.healthLifeExpectancy}
-                        </div>
-                        <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            Generosity: ${lookup[d.ADMIN]?.generosity}
-                        </div>
-                        <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            Freedom: ${lookup[d.ADMIN]?.freedom}
-                        </div>
-                        <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            TrustGovernmentCorruption: ${lookup[d.ADMIN]?.trustGovernmentCorruption}
-                        </div>
-                        <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            DystopiaResidual: ${lookup[d.ADMIN]?.dystopiaResidual}
-                        </div>
-                        <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;">
-                            DataYear: ${lookup[d.ADMIN]?.year}
-                        </div>
-                        
                     </div>
                 `;
                     }}

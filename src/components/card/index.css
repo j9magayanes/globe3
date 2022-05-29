@@ -1,0 +1,19 @@
+.card {
+    margin-top: 5%;
+    justify-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    width: 75%;
+    height: 15;
+    border: inset;
+    border-color: burlywood;
+    border-radius: 5%;
+    margin-bottom: 1%;
+}
+
+.news {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  

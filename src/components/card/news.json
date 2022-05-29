@@ -1,0 +1,69 @@
+{"news":[
+    {
+      "latitude": "-126.183",
+      "longitude": "-703.947",
+      "category": "Biodiversity",
+      "headline": "A new road in Peru’s Amazon puts uncontacted peoples at risk",
+      "content": "One of Peru’s biggest road projects threatens Amazon biodiversity and communities, as questions hang over its impact assessments",
+      "image": "https://dialogochino.net/wp-content/uploads/2022/04/Manu-Road-Peru_Alamy_DEMW48-1440x720.jpg",
+      "link": "https://dialogochino.net/en/infrastructure/52642-new-road-peru-amazon-uncontacted-peoples-at-risk/",
+      "country": "Peru",
+      "source": "Dialogo Chino"
+    },
+    {
+      "latitude": "-25.274.022",
+      "longitude": "133.775.392",
+      "category": "Biodiversity",
+      "headline": "‘Worst it’s ever been’: a threatened species alarm sounds during the election campaign – and is ignored",
+      "content": "Warnings of dramatically escalating extinctions in Australia over the next two decades seem to be falling on deaf ears",
+      "image": "https://i.guim.co.uk/img/media/dae5ed16d0c1a7c21ef77855a4db9a9cfe0c99b7/0_285_4500_2700/master/4500.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=6523dc23d78dde4fe4e3e51c1584c200",
+      "link": "https://www.theguardian.com/environment/2022/apr/25/worst-its-ever-been-a-threatened-species-alarm-sounds-during-the-election-campaign-and-is-ignored",
+      "country": "Australia",
+      "source": "The Guardian"
+    },
+    {
+      "latitude": "39.905",
+      "longitude": "1.163.914",
+      "category": "Biodiversity",
+      "headline": "China turns cities into sponges to stop flooding",
+      "content": "In the coming decade, China is expanding its plans for sponge cities. They can help prevent flooding, promote biodiversity and cut emissions. But what exactly are these cities and how do they work?",
+      "image": "https://static.dw.com/image/61425209_303.jpg",
+      "link": "https://www.dw.com/en/china-turns-cities-into-sponges-to-stop-flooding/a-61414704",
+      "country": "China",
+      "source": "Deutsche Welle"
+    },
+    {
+      "latitude": "473.786",
+      "longitude": "Aug 54",
+      "category": "Biodiversity",
+      "headline": "Imkerboom hilft den Honigbienen – gefährdet aber die Wildbienen",
+      "content": "Nach Jahren des Bienensterbens haben sich die Schweizer Honigbienen erholt. Gleichzeitig gehen Wildbienen-Bestände zurück, sagen Experten und sehen einen Zusammenhang. Mögliche Lösung: Mehr Vorschriften für die Imker. Der Verband will dafür Hand bieten, sieht aber auch Konfliktpotenzial.",
+      "image": "https://www.srf.ch/static/cms/images/1280w/ddc915.webp",
+      "link": "https://www.srf.ch/news/schweiz/schweizer-biodiversitaet-imkerboom-hilft-den-honigbienen-gefaehrdet-aber-die-wildbienen",
+      "country": "Switzerland",
+      "source": "SRF"
+    },
+    {
+      "latitude": "39.905",
+      "longitude": "1.163.914",
+      "category": "Bodiversity",
+      "headline": "UN’s COP15 biodiversity summit in limbo as Omicron uncertainty threatens date",
+      "content": "Summit’s second phase in China is supposed to finalise a global framework to address the loss of animal and plant species",
+      "image": "https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2022/01/26/b4b17495-4dad-4fcf-80ac-a1891f49d293_edd88472.jpg",
+      "link": "https://www.scmp.com/news/china/science/article/3164708/uns-cop15-biodiversity-summit-limbo-omicron-uncertainty",
+      "country": "China",
+      "source": "South China Morning Post"
+    },
+    {
+      "latitude": "39.905",
+      "longitude": "1.163.914",
+      "category": "Biodiversity",
+      "headline": "China: Abwasser zerstört Seegraswiesen",
+      "content": "Seegraswiesen sind wichtig fürs Ökosystem. Ungeklärtes Abwasser, das im Meer landet, macht ihnen zu schaffen. Vor allem, wenn die Stickstoffkonzentration einen bestimmten Wert überschreitet.",
+      "image": "https://static.spektrum.de/fm/912/f2000x857/iStock-1239747538_ArnaudAbadie.jpg",
+      "link": "https://www.spektrum.de/news/abwasser-zerstoert-seegraswiesen/1745452",
+      "country": "China",
+      "source": "Spektrum"
+    }
+   ]
+}

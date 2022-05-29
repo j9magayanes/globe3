@@ -21,8 +21,8 @@ function Search() {
             <em>None</em>
           </MenuItem>
           <MenuItem value="carbon">Carbon Emission</MenuItem>
-          <MenuItem value="wildfire">Wildfire Incidents</MenuItem>
-          <MenuItem value="earthquake">Earthquake</MenuItem>
+          <MenuItem value="wildfire">Bio Diversity</MenuItem>
+          <MenuItem value="earthquake">Wildfire Incident</MenuItem>
         </Select>
 
       </FormControl>

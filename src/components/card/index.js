@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -7,15 +7,32 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CardMedia from "@mui/material/CardMedia";
 import "./index.css";
-import news from  "./news.json"
-
-
+import news from  "./news.json";
+import { useNewsData } from "../../hooks/useNewsData";
+import { useSelector, useStore } from "react-redux";
 
 
 export default function BasicCard() {
+  const state = useState();
+  const store = useStore();
+  const category = useSelector(() => store.getState().categoryReducer.category);
+  const [country, setCountry] = useState('');
+  const newsData = useNewsData();  
+  const categories = [];
+
+  if (newsData && category) {
+    newsData.items.forEach((data) => {
+      if (data.category === category) {
+        categories.push(data);
+      }
+    });
+  }
+
+  console.log(newsData)
+
   return (
     <div className="news">
-      {news.news.map((news) => (
+      {categories.map((news) => (
         <Card sx={{ maxWidth: 300, border: "none", boxShadow: "none", margin: "1px" }} >
           <CardMedia component="img" height="200" image={news.image} />
           <CardContent>

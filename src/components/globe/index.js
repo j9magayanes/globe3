@@ -55,7 +55,6 @@ export default function GlobeComponent() {
   }
 
 
-  console.log(datas)
 
   React.useEffect(() => {
     const fetchData = async () => {

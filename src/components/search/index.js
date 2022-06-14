@@ -1,10 +1,20 @@
 import "./index.css";
 import Select , { SelectChangeEvent } from '@mui/material/Select';
+import { connect, useDispatch, useStore } from "react-redux";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import { ADD_CATEGORY } from "../../actions/actionCreators";
 
 function Search() {
+  const dispatch = useDispatch();
+
+  function handleSelectChange(event) {
+    dispatch({
+      type: ADD_CATEGORY,
+      category: event.target.value,
+    });
+  }
 
 
   return (
@@ -16,30 +26,18 @@ function Search() {
           labelId="demo-simple-select-helper-label"
           id="demo-simple-select-helper"
           label="Select a category"
+          onChange={handleSelectChange}
         >
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value="carbon">Carbon Emission</MenuItem>
-          <MenuItem value="wildfire">Bio Diversity</MenuItem>
-          <MenuItem value="earthquake">Wildfire Incident</MenuItem>
+          <MenuItem value="biodiversity">Bio Diversity</MenuItem>
+          <MenuItem value="wildfire">Wildfire Incident</MenuItem>
         </Select>
 
       </FormControl>
     </div>
-    // <FormControl fullWidth >
-    //   <Select
-    //     labelId="demo-simple-select-label"
-    //     id="demo-simple-select"
-    //     label="category"
-    //     onChange={handleSelectChange}
-    //   >
-    //     <option value="all" className="option">Select a Category</option>
-    //     <option value="carbon" className="option">Carbon Emission</option>
-    //     <option value="wildfire" className="option">Wildfire</option>
-    //     <option value="earthquake" className="option">Money</option>
-    //   </Select>
-    // </FormControl>
   );
 }
 

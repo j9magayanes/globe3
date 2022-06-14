@@ -28,12 +28,8 @@ function Search() {
           label="Select a category"
           onChange={handleSelectChange}
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
           <MenuItem value="carbon">Carbon Emission</MenuItem>
           <MenuItem value="biodiversity">Bio Diversity</MenuItem>
-          <MenuItem value="wildfire">Wildfire Incident</MenuItem>
         </Select>
 
       </FormControl>

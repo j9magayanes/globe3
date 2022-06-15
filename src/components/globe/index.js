@@ -11,8 +11,8 @@ export default function GlobeComponent() {
   const store = useStore();
   const category = useSelector(() => store.getState().categoryReducer.category);
   const carbonData = useCarbonData();
-  const newsData  = useNewsData();
-  const bioDiversityData  = useBioDiversityData();
+  const newsData = useNewsData();
+  const bioDiversityData = useBioDiversityData();
   const [hoverD, setHoverD] = React.useState();
   const globeEl = React.useRef();
   let categories = [];
@@ -31,9 +31,14 @@ export default function GlobeComponent() {
   // for the data points
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
-  const colorScale = chroma.scale(category === "biodiversity" ? ["white", "green"]: category === "wildfire" ? ["#fe8579", "#b21100"]: ["white", "black"]);
-  let link;
-
+  const colorScale = chroma.scale(
+    category === "biodiversity"
+      ? ["white", "red"]
+      : category === "wildfire"
+      ? ["#fe8579", "#b21100"]
+      : ["white", "black"]
+  );
+ 
   if (newsData && category) {
     newsData.items.map((data) => {
       if (data.category === category) {
@@ -42,27 +47,27 @@ export default function GlobeComponent() {
     });
   }
 
+  let link;
   if (category === "") {
-    link = "https://raw.githubusercontent.com/j9magayanes/data/main/carbonclean.json";
+    link =
+      "https://raw.githubusercontent.com/j9magayanes/data/main/carbonclean.json";
   }
 
   if (category === "carbon") {
-    link = "https://raw.githubusercontent.com/j9magayanes/data/main/carbonclean.json";
+    link =
+      "https://raw.githubusercontent.com/j9magayanes/data/main/carbonclean.json";
   }
 
   if (category === "biodiversity") {
-      link = "https://raw.githubusercontent.com/j9magayanes/data/main/biodiversity.json";
+    link =
+      "https://raw.githubusercontent.com/j9magayanes/data/main/biodiversity.json";
   }
-
-
 
   React.useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-       fetch(
-         link
-          )
+        fetch(link)
           .then((response) => response.json())
           .then((data) => {
             const sortedData = data.sort((a, b) =>
@@ -160,7 +165,7 @@ export default function GlobeComponent() {
             labelLng={(d) => d.long}
             labelAltitude={0.015}
             labelText={(d) => ""}
-            labelLabel={(d) =>  `
+            labelLabel={(d) => `
                     <div style="position: relative; z-index: 4; width: 430px; background: #fff;border: 1px solid #E5E5E5;box-shadow: 0px 2px 20px rgba(32, 32, 35, 0.13);border-radius: 4px; text-align: center;">
                     <div style="font-family: 'Open sans', sans-serif; margin-bottom:10px;font-weight: 600;font-size: 13px;line-height: 16px;text-transform: capitalize;color: #2D3032;">          
                     </div>
@@ -168,8 +173,8 @@ export default function GlobeComponent() {
                             <h1> ${d.headline}</h1>
                         </div>
                         <img style="height: 200px" src=${d.image}>
-                    <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850;  padding: 1px 1px; ">
-                            <h3>${d.content}...</h3>
+                    <div style="font-family: 'Open sans', sans-serif;font-size: 13px;line-height: 16px;color: #3E4850; text-align: justify ">
+                            <h3 style=" margin: 2px 2px;">${d.content}...</h3>
                         </div>
                     </div>
                 `}

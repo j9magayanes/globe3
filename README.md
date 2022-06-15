@@ -1,12 +1,3 @@
-Globe news
-A fairly simple app made with react and react-globe.gl which uses Three.js under to visualize
-worlds happiness and other related social data. based on the example provided by react-globe.gl. check them
-out [here](https://github.com/vasturiano/react-globe.gl).
-
-
-
-
-[Live Preview](https://globe3-9fec9.web.app/) [Video Preview]
 
 ## Available Scripts
 
